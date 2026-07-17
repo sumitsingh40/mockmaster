@@ -1,69 +1,57 @@
-# React + TypeScript + Vite
+# Mock Master
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Mock Master is a React + TypeScript web app for mock interviews, practice feedback, and interview prep workflows.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Mock interview flow with question, response, and review steps
+- Firebase-backed services and authentication handlers
+- Reusable UI components built with Radix, Tailwind, and Lucide
+- Face and speech-related integrations for interview practice scenarios
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19
+- Vite 7
+- TypeScript
+- Tailwind CSS
+- Firebase
+- Clerk
+- Framer Motion
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+pnpm install
+pnpm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Available Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `pnpm run dev` starts the local Vite dev server
+- `pnpm run build` creates a production build
+- `pnpm run lint` runs ESLint
+- `pnpm run preview` previews the production build locally
+- `pnpm run deploy` builds the app and publishes `dist` to GitHub Pages
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## GitHub Pages
+
+This project is configured for GitHub Pages under the repository path `/mockmaster/`.
+
+To deploy:
+
+```bash
+pnpm run deploy
 ```
+
+The live site will be available at:
+
+https://sumitsingh40.github.io/mockmaster/
+
+## Environment
+
+Keep local secrets in `.env.local`. The file is ignored by Git and should not be committed.
+
+## License
+
+MIT
