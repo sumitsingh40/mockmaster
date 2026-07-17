@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { useState } from "react";
+import { assetPath } from "@/lib/helpers";
 
 // 🔹 Replace content with your project’s testimonials
 const testimonials = [
@@ -8,19 +9,19 @@ const testimonials = [
     name: "Samantha Lee",
     role: "Software Engineer @ Google",
     text: "MockMaster gave me the confidence I needed. The AI feedback was spot-on and helped me ace my interviews.",
-    avatar: "/assets/img/user.png",
+    avatar: assetPath("assets/img/user.png"),
   },
   {
     name: "Rahul Sharma",
     role: "Backend Developer @ Amazon",
     text: "The mock interviews felt so real! I improved my problem-solving speed and communication drastically.",
-    avatar: "/assets/img/user.png",
+    avatar: assetPath("assets/img/user.png"),
   },
   {
     name: "Emily Davis",
     role: "Data Scientist @ Microsoft",
     text: "I loved the personalized feedback. It highlighted my weak spots and helped me land my dream job!",
-    avatar: "/assets/img/user.png",
+    avatar: assetPath("assets/img/user.png"),
   },
 ];
 

@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
+import { assetPath } from "@/lib/helpers";
 
 const features = [
 	{
@@ -47,11 +48,11 @@ const features = [
 ];
 
 const techLogos = [
-	{ src: "/assets/img/logo/tailwindcss.png", alt: "Tailwind" },
-	{ src: "/assets/img/logo/firebase.png", alt: "Firebase" },
-	{ src: "/assets/img/logo/meet.png", alt: "Google Meet" },
-	{ src: "/assets/img/logo/zoom.png", alt: "Zoom" },
-	{ src: "/assets/img/logo/microsoft.png", alt: "Microsoft" },
+	{ src: assetPath("assets/img/logo/tailwindcss.png"), alt: "Tailwind" },
+	{ src: assetPath("assets/img/logo/firebase.png"), alt: "Firebase" },
+	{ src: assetPath("assets/img/logo/meet.png"), alt: "Google Meet" },
+	{ src: assetPath("assets/img/logo/zoom.png"), alt: "Zoom" },
+	{ src: assetPath("assets/img/logo/microsoft.png"), alt: "Microsoft" },
 ];
 
 const HomePage = () => {
@@ -153,7 +154,7 @@ const HomePage = () => {
 							transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
 						/>
 						<motion.img
-  src="/assets/img/girl.png"
+							src={assetPath("assets/img/girl.png")}
   alt="Mock Interview Illustration"
   className="relative w-full h-auto object-contain z-10 drop-shadow-2xl"
   initial={{ scale: 0.9 }}

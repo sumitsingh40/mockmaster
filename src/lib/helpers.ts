@@ -16,3 +16,5 @@ export const MainRoutes = [
     href: "/services",
   },
 ];
+
+export const assetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
