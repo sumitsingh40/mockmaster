@@ -44,6 +44,8 @@ To deploy:
 pnpm run deploy
 ```
 
+For automatic publishing from GitHub, enable Pages in the repository settings and set the source to GitHub Actions.
+
 The live site will be available at:
 
 https://sumitsingh40.github.io/mockmaster/
